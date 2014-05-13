@@ -1,0 +1,21 @@
+<h1><%= @artist.name %></h1>
+<%= image_tag @artist.image %>
+<p><%= @artist.dob %></p>
+<p><%= @artist.nationality %></p>
+<p><%= link_to "Edit Artist", edit_artist_path(@artist) %></p>
+
+<hr/>
+
+<h2>Paintings</h2>
+
+<% @artist.paintings.each do |painting| %>
+  <section>
+    <h3><b>Title</b>: <%= link_to painting.title, painting %></h3>
+    <p><b>Museum</b>: <%= link_to painting.museum.name, painting.museum %></p>
+    <%= image_tag painting.image %>
+    <p><b>Year</b>: <%= painting.year%></p>
+    <p><b>Style</b>: <%= painting.style%></p>
+    <hr/>
+  </section>
+
+ <% end %>

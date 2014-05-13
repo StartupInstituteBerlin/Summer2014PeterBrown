@@ -1,0 +1,19 @@
+<h1>Artist</h1>
+
+<h3><%= link_to "+ Add New Artist", new_artist_path %></h3>
+
+<br/><hr/>
+
+<% if @artists.any? %>
+
+  <% @artists.each do |artist| %>
+    <section>
+      <h3><b>Name</b>: <%= link_to artist.name, artist %></h3>
+      <%= image_tag artist.image %>
+      <p><b>Year of Birth</b>: <%= artist.dob %></p>
+      <p><b>Nationality</b>: <%= artist.nationality %></p>
+
+      <hr>
+    </section>
+  <% end %>
+<% end %>

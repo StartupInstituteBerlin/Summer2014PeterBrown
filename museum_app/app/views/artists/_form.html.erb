@@ -1,0 +1,33 @@
+<% if @artist.errors.any? %>
+  <h2>There were errors saving your artist</h2>
+  <ul>
+    <% @artist.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @artist do |f| %>
+  <fieldset>
+    <div class='fields'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class='fields'>
+      <%= f.label :nationality %>
+      <%= f.text_field :nationality %>
+    </div>
+    <div class='fields'>
+      <%= f.label :dob %>
+      <%= f.text_field :dob %>
+    </div>
+    <div class='fields'>
+      <%= f.label :image %>
+      <%= f.text_field :image %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
+
+<br/>
