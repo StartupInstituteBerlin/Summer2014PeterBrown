@@ -1,5 +1,13 @@
 <h3>Part 1: </h3>
-Kick-off sample with Rails
-Generate a vanilla Rails project
-Understand the basic structure of a Rails project
-Test the Rails development server
+<p>
+	Kick-off sample with Rails</p>
+<p>Generate a vanilla Rails project</p>
+<p>Understand the basic structure of a Rails project</p>
+<p>Test the Rails development server</p>
+
+<h3>Reflect</h3>
+<li>What is Rails?</li>
+<li>What is meant by Rails being “opinionated”?</li>
+<li>What are the advantages and limitations in generating the project over writing the pieces individually?</li>
+<li>Why does Rails generate so much “stuff”?</li>
+
