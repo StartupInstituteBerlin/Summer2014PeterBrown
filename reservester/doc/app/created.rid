@@ -1,7 +1,0 @@
-Wed, 14 May 2014 04:27:18 -0700
-README.rdoc	Tue, 13 May 2014 18:21:36 -0700
-app/controllers/application_controller.rb	Tue, 13 May 2014 18:21:36 -0700
-app/controllers/articles_controller.rb	Tue, 13 May 2014 18:26:30 -0700
-app/helpers/application_helper.rb	Tue, 13 May 2014 18:21:36 -0700
-app/helpers/articles_helper.rb	Tue, 13 May 2014 18:26:30 -0700
-app/models/article.rb	Tue, 13 May 2014 18:26:30 -0700
