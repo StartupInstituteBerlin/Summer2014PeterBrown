@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: reservester1_0_development
   pool: 5
-  username: peterbrown
+  username: peterbrown 
   password:
   host: localhost
 
