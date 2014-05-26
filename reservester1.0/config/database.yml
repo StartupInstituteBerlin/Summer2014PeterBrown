@@ -58,5 +58,4 @@ production:
   encoding: unicode
   database: reservester1_0_production
   pool: 5
-  username: peterbrown
-  password:
+  username: reservester1_0

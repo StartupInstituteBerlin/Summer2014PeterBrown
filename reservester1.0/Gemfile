@@ -33,6 +33,7 @@ group :doc do
 end
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
+  
   gem 'annotate', '2.5.0'
   gem 'quiet_assets'
   gem 'simplecov', '0.6.3'
@@ -46,7 +47,19 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end
+
 gem 'spring'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
+gem 'dotenv-rails'
+
+gem 'fog'
+gem 'rmagick'
+gem "mini_magick"
+gem 'carrierwave'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
