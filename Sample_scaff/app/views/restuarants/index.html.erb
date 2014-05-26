@@ -10,12 +10,13 @@
 
   <tbody>
     <% @restuarants.each do |restuarant| %>
-      <tr>
+  <tr>
         <td><%= restuarant.name %></td>
+        <% if current_user && restuarant.user == current_user %> 
         <td><%= link_to 'Show', restuarant %></td>
         <td><%= link_to 'Edit', edit_restuarant_path(restuarant) %></td>
         <td><%= link_to 'Destroy', restuarant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% end %></tr> 
     <% end %>
   </tbody>
 </table>

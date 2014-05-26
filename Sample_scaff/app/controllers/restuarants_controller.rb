@@ -1,10 +1,16 @@
 class RestuarantsController < ApplicationController
   before_action :set_restuarant, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update]
 
   # GET /restuarants
   # GET /restuarants.json
   def index
-    @restuarants = Restuarant.all
+    
+    if current_user
+      @restuarants = current_user.restuarants
+    else
+      @restuarants = Restuarant.all
+    end
   end
 
   # GET /restuarants/1
@@ -69,6 +75,6 @@ class RestuarantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restuarant_params
-      params.require(:restuarant).permit(:name)
+      params.require(:restuarant).permit(:name, :user_id)
     end
 end
