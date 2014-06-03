@@ -1,21 +1,21 @@
-# CarrierWave.configure do |config|
-#   config.fog_credentials = {
-#     :provider               => 'AWS',
-#     :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
-#     :aws_secret_access_key  => ENV['AWS_SECRET_KEY']
-#   }
-
-#   config.fog_directory  = ENV["reservester1.0_#{Rails.env}"]
-# end
-
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',
-    :aws_access_key_id      => 'AKIAIO7IE4VTGHMMJ43Q',
-    :aws_secret_access_key  => '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',
-    :region                 => 'us-west-2'
+    :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
+    :aws_secret_access_key  => ENV['AWS_SECRET_KEY']
   }
-  config.fog_directory  = 'reservester-1.0'
+
+  config.fog_directory  = ENV["reservester1.0_#{Rails.env}"]
+end
+
+# CarrierWave.configure do |config|
+#   config.fog_credentials = {
+#     :provider               => 'AWS',
+#     :aws_access_key_id      => 
+#     :aws_secret_access_key  => 
+#     :region                 => 'us-west-2'
+#   }
+#   config.fog_directory  = 'reservester-1.0'
 end
 
 # CarrierWave.configure do |config|
