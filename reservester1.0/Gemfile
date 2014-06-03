@@ -59,6 +59,7 @@ gem 'fog'
 gem 'rmagick'
 gem "mini_magick"
 gem 'carrierwave'
+gem 'sidekiq'
 
 
 # Use ActiveModel has_secure_password

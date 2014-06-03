@@ -3,7 +3,7 @@ class ResturantsController < ApplicationController
 		@resturant = Resturant.all
 	end
 	def new
-		@resturant =Resturant.new
+		@resturant = Resturant.new
 	end
 	def create
 		@resturant = Resturant.create!(permited_params)
@@ -16,10 +16,13 @@ class ResturantsController < ApplicationController
 	end
 	def destroy
 	end
+	
 	private
+	
 	def set_restuarant
       @resturant = Resturant.find(params[:id])
     end
+	
 	def permited_params
 		params.require(:resturant).permit(:name, :description)
 	end
