@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   before_action :authenticate_owner!, :except => [:index, :show]
   before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
-  
+
   def index
     @restaurants = Restaurant.all
   end
@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @owner = Owner.find(params[:owner_id])
   end
 
   def create
