@@ -33,6 +33,8 @@
 
     <%= javascript_include_tag "application" %>
   </head>
+  
+
   <body>
 
     <div class="navbar navbar-fixed-top">
@@ -43,12 +45,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Reservester10</a>
+          <%= link_to 'Home', root_path, :class => 'brand' %>
           <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+            <ul class="nav pull-right">
+              <%if owner_signed_in? %>
+              <li><%= link_to "Logout", "#"  %></li>
+              <% else %>
+              <li><%= link_to "Login", "#"  %></li>
+              <li><%= link_to "Register", "#"  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

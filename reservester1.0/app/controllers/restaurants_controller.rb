@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+  before_action :authenticate_owner!, :except => [:index, :show]
+  before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
   
   def index
     @restaurants = Restaurant.all
@@ -45,6 +47,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo)
+    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo, :photo_cache)
   end
 end
