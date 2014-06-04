@@ -10,7 +10,7 @@ CarrierWave.configure do |config|
    
     #:region                 => ENV['AWS_S3_REGION'],            
   }
-  config.fog_directory  = 'reservester-1.0'           
+  config.fog_directory  = 'reservesterpeter'           
   config.fog_public     = false                          
 end
 
