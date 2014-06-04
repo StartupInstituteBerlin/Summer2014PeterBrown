@@ -46,8 +46,8 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
-  gem 'dotenv-rails'
 end
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'spring'
 gem 'therubyracer'
@@ -57,10 +57,11 @@ gem 'twitter-bootstrap-rails'
 
 
 gem 'fog'
-gem 'rmagick'
+gem 'rmagick', require: false
 gem "mini_magick"
 gem 'carrierwave'
 gem 'sidekiq'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password

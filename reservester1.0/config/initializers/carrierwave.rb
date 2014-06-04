@@ -1,22 +1,30 @@
+#add .env file to store secret key
+
 CarrierWave.configure do |config|
   config.fog_credentials = {
-    :provider               => 'AWS',
-    :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
-    :aws_secret_access_key  => ENV['AWS_SECRET_KEY']
-  }
+    :provider               => 'AWS',                
+    :aws_access_key_id      => ENV['AWS_S3_KEY_ID'],                  
+    :aws_secret_access_key  => ENV['AWS_S3_ACCESS_KEY'],
 
-  config.fog_directory  = ENV["reservester1.0_#{Rails.env}"]
+    :path_style => true # now can except a dot in bucket name
+   
+    #:region                 => ENV['AWS_S3_REGION'],            
+  }
+  config.fog_directory  = 'reservester-1.0'           
+  config.fog_public     = false                          
 end
 
 # CarrierWave.configure do |config|
 #   config.fog_credentials = {
 #     :provider               => 'AWS',
-#     :aws_access_key_id      => 
-#     :aws_secret_access_key  => 
-#     :region                 => 'us-west-2'
+#     :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
+#     :aws_secret_access_key  => ENV['AWS_SECRET_KEY']
 #   }
-#   config.fog_directory  = 'reservester-1.0'
-end
+
+#   config.fog_directory  = ENV["reservester1.0_#{Rails.env}"]
+# end
+
+
 
 # CarrierWave.configure do |config|
 #   config.fog_credentials = {

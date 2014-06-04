@@ -247,3 +247,590 @@ Processing by RestaurantsController#show as HTML
   [1m[35mRestaurant Load (0.7ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "6"]]
   Rendered restaurants/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 11:57:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (28.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.7ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 1001ms (Views: 906.0ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 11:57:34 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 132ms (Views: 131.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/3" for 127.0.0.1 at 2014-06-03 11:57:38 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRestaurant Load (32.2ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered restaurants/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 126ms (Views: 89.9ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/restaurants/6" for 127.0.0.1 at 2014-06-03 11:57:44 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRestaurant Load (12.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  Rendered restaurants/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 88ms (Views: 70.7ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 11:57:49 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (701.6ms)
+  Rendered restaurants/new.html.erb within layouts/application (732.0ms)
+Completed 200 OK in 819ms (Views: 818.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 11:59:10 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Fernwood", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd49371fa10 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-96791-8bi5ld>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"Some place that serves bad food", "phone"=>"323-495-5555", "address"=>"1234 made up"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+Completed 500 Internal Server Error in 1288ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.6ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:02:38 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Fernwood", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd4991fbab0 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-96791-1c0lzo>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"Some place that serves bad food", "phone"=>"323-495-5555", "address"=>"1234 made up"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+Completed 500 Internal Server Error in 968ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2014-06-03 12:02:48 -0700
+
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (39.2ms)
+
+
+Started GET "/path1" for 127.0.0.1 at 2014-06-03 12:02:48 -0700
+
+ActionController::RoutingError (No route matches [GET] "/path1"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 12:03:00 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (6.4ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 107ms (Views: 100.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:03:03 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (8.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 83ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 12:04:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.1ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 358ms (Views: 302.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:04:34 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (477.3ms)
+  Rendered restaurants/new.html.erb within layouts/application (482.9ms)
+Completed 200 OK in 604ms (Views: 602.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:05:05 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Fernwood", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb1d6eae9f0 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-97229-hyw0z3>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"Big Sur", "phone"=>"345343", "address"=>"Some place"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+Completed 500 Internal Server Error in 999ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 12:08:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 379ms (Views: 319.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:08:41 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (464.3ms)
+  Rendered restaurants/new.html.erb within layouts/application (469.5ms)
+Completed 200 OK in 554ms (Views: 553.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:08:48 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (8.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:09:11 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Fernwood", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007f93d30c1638 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-97482-h2h05b>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"Big Sur", "phone"=>"234321", "address"=>"1234 Fake street"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (100.0ms)[0m  INSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["address", "1234 Fake street"], ["created_at", Tue, 03 Jun 2014 19:09:13 UTC +00:00], ["description", "Big Sur"], ["name", "Fernwood"], ["phone", "234321"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:09:13 UTC +00:00]]
+  [1m[36m (15.9ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 4738ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.6ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2014-06-03 12:19:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 355ms (Views: 300.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:19:32 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (575.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (598.1ms)
+Completed 200 OK in 674ms (Views: 672.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:19:39 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"SAd", "photo_cache"=>"", "description"=>"sadasd", "phone"=>"sad", "address"=>"asd"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.2ms)[0m  INSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["address", "asd"], ["created_at", Tue, 03 Jun 2014 19:19:39 UTC +00:00], ["description", "sadasd"], ["name", "SAd"], ["phone", "sad"], ["updated_at", Tue, 03 Jun 2014 19:19:39 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/8
+Completed 302 Found in 35ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/restaurants/8" for 127.0.0.1 at 2014-06-03 12:19:39 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mRestaurant Load (6.7ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "8"]]
+  Rendered restaurants/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 124ms (Views: 104.3ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/restaurants/8" for 127.0.0.1 at 2014-06-03 12:19:42 -0700
+Processing by RestaurantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "id"=>"8"}
+  [1m[36mRestaurant Load (3.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 12ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2014-06-03 12:19:42 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-03 12:19:44 -0700
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/_form.html.erb (8.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:19:54 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fc115cd95c8 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98141-170x0vk>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:19:56 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:19:56 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4162ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.8ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:20:15 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fc112f9ed38 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98141-1ii790s>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:20:17 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:20:17 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 3917ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.7ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:20:22 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fc115803030 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98141-1dkt0f5>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:20:24 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:20:24 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 3566ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:22:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb9e34d18a0 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98331-1qjyg3m>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:22:36 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:22:36 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4208ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (34.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.4ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:22:47 -0700
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb9e13d1bf0 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98331-14z88o4>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:22:48 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:22:48 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 3857ms
+
+Excon::Errors::SocketError (hostname "reservester-1.0.s3.amazonaws.com" does not match the server certificate (OpenSSL::SSL::SSLError)):
+  app/controllers/restaurants_controller.rb:18:in `create'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2014-06-03 12:25:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"adsfasdf", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007f8dae7443c8 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98541-1ebhfl>, @original_filename="IMG_0115.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0115.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"sadfasdf", "phone"=>"asdfasdf", "address"=>"dasfasdf"}, "commit"=>"Create Restaurant"}
+Unpermitted parameters: photo_cache
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "restaurants" ("address", "created_at", "description", "name", "phone", "photo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "dasfasdf"], ["created_at", Tue, 03 Jun 2014 19:25:56 UTC +00:00], ["description", "sadfasdf"], ["name", "adsfasdf"], ["phone", "asdfasdf"], ["photo", "IMG_0115.jpg"], ["updated_at", Tue, 03 Jun 2014 19:25:56 UTC +00:00]]
+  [1m[35m (10.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants/14
+Completed 302 Found in 1737ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/restaurants/14" for 127.0.0.1 at 2014-06-03 12:25:56 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRestaurant Load (1.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  Rendered restaurants/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 305ms (Views: 300.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurants/14/edit" for 127.0.0.1 at 2014-06-03 12:26:15 -0700
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mRestaurant Load (1.2ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "14"]]
+  Rendered restaurants/_form.html.erb (519.2ms)
+  Rendered restaurants/edit.html.erb within layouts/application (525.5ms)
+Completed 200 OK in 625ms (Views: 621.0ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/restaurants/14" for 127.0.0.1 at 2014-06-03 12:26:45 -0700
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Fernwood", "photo_cache"=>"", "description"=>"Its in the woods", "phone"=>"Smoke signals", "address"=>"Big Sur"}, "commit"=>"Update Restaurant", "id"=>"14"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+Unpermitted parameters: photo_cache
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mUPDATE "restaurants" SET "name" = $1, "description" = $2, "phone" = $3, "address" = $4, "updated_at" = $5 WHERE "restaurants"."id" = 14[0m  [["name", "Fernwood"], ["description", "Its in the woods"], ["phone", "Smoke signals"], ["address", "Big Sur"], ["updated_at", Tue, 03 Jun 2014 19:26:45 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants/14
+Completed 302 Found in 15ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/restaurants/14" for 127.0.0.1 at 2014-06-03 12:26:45 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  Rendered restaurants/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurants/" for 127.0.0.1 at 2014-06-03 12:26:55 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.7ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/uploads/restaurant/photo/6/thumbnail_311599_265200023497708_246318675385843_1040381_6357837_n.jpg" for 127.0.0.1 at 2014-06-03 12:26:56 -0700
+
+ActionController::RoutingError (No route matches [GET] "/uploads/restaurant/photo/6/thumbnail_311599_265200023497708_246318675385843_1040381_6357837_n.jpg"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (51.2ms)
+
+
+Started GET "/uploads/restaurant/photo/6/thumbnail_311599_265200023497708_246318675385843_1040381_6357837_n.jpg" for 127.0.0.1 at 2014-06-03 12:26:56 -0700
+
+ActionController::RoutingError (No route matches [GET] "/uploads/restaurant/photo/6/thumbnail_311599_265200023497708_246318675385843_1040381_6357837_n.jpg"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (43.3ms)
+
+
+Started GET "/restaurants/6" for 127.0.0.1 at 2014-06-03 12:26:58 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  Rendered restaurants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 135ms (Views: 129.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/uploads/restaurant/photo/6/masthead_311599_265200023497708_246318675385843_1040381_6357837_n.jpg" for 127.0.0.1 at 2014-06-03 12:26:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/uploads/restaurant/photo/6/masthead_311599_265200023497708_246318675385843_1040381_6357837_n.jpg"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.6ms)
+
+
+Started GET "/restaurants/6/edit" for 127.0.0.1 at 2014-06-03 12:27:01 -0700
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mRestaurant Load (1.1ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "6"]]
+  Rendered restaurants/_form.html.erb (8.3ms)
+  Rendered restaurants/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/restaurants/6" for 127.0.0.1 at 2014-06-03 12:27:36 -0700
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "restaurant"=>{"name"=>"Not delicious but cute", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007f8db0143760 @tempfile=#<Tempfile:/var/folders/yd/fwhrsgb110gccq96l3tr6b4c0000gn/T/RackMultipart20140603-98541-zffrdo>, @original_filename="IMG_0063.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[photo]\"; filename=\"IMG_0063.jpg\"\r\nContent-Type: image/jpeg\r\n">, "photo_cache"=>"", "description"=>"Not very tasty", "phone"=>"2154954441", "address"=>"1423 Mcallister Street"}, "commit"=>"Update Restaurant", "id"=>"6"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+Unpermitted parameters: photo_cache
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSQL (0.9ms)[0m  UPDATE "restaurants" SET "photo" = $1, "updated_at" = $2 WHERE "restaurants"."id" = 6  [["photo", "IMG_0063.jpg"], ["updated_at", Tue, 03 Jun 2014 19:27:37 UTC +00:00]]
+  [1m[36m (66.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/6
+Completed 302 Found in 1829ms (ActiveRecord: 68.0ms)
+
+
+Started GET "/restaurants/6" for 127.0.0.1 at 2014-06-03 12:27:37 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mRestaurant Load (0.6ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "6"]]
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-03 12:27:45 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.9ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.9ms)
