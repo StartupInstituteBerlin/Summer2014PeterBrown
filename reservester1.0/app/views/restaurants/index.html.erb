@@ -9,15 +9,14 @@
   </h1>
 </div>
 
+
 <ul class="thumbnails">
-  <%- @restaurants.each do |restaurant| %>
-    <li class="span3">
+  <% @restaurants.each do |restaurant| %>
+    <li class="span4">
       <%= link_to restaurant do %>
-        <div class="thumbnail">
-          <img src="<%= restaurant.photo.thumbnail.url %>" alt="">
-          <h3><%= restaurant.name %></h3>
-        </div>
+        <%= image_tag restaurant.photo.thumbnail.url if restaurant.photo? %>
+        <h3><%= restaurant.name %><h3>
       <%- end %>
     </li>
-  <%- end %>
+  <% end %>
 </ul>

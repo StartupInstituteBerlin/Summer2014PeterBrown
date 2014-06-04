@@ -476,3 +476,638 @@ Processing by RestaurantsController#index as HTML
   [1m[36mRestaurant Load (5.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
   Rendered restaurants/index.html.erb within layouts/application (10.3ms)
 Completed 200 OK in 101ms (Views: 94.2ms | ActiveRecord: 5.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddOwnerIdToRestaurants (20140604160201)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (18.3ms)[0m  [1mALTER TABLE "restaurants" ADD COLUMN "owner_id" integer[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140604160201"]]
+  [1m[36m (1048.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:10:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (1.3ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 1229ms (Views: 728.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/restaurants/14" for 127.0.0.1 at 2014-06-04 09:10:59 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRestaurant Load (1.7ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  Rendered restaurants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 108ms (Views: 99.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/owners/sign_in" for 127.0.0.1 at 2014-06-04 09:11:04 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (808.2ms)
+Completed 200 OK in 913ms (Views: 892.6ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/owners/sign_in" for 127.0.0.1 at 2014-06-04 09:11:20 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "owner"=>{"email"=>"passthesugarluv@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mOwner Load (3.6ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."email" = 'passthesugarluv@yahoo.com' ORDER BY "owners"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 50ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "owner"=>{"email"=>"passthesugarluv@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 167ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/owners/sign_up" for 127.0.0.1 at 2014-06-04 09:11:25 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/owners" for 127.0.0.1 at 2014-06-04 09:11:46 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "owner"=>{"email"=>"example@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 105ms
+
+NoMethodError (undefined method `name' for #<Owner:0x007fc227fcdde8>):
+  activemodel (4.0.4) lib/active_model/attribute_methods.rb:439:in `method_missing'
+  activerecord (4.0.4) lib/active_record/attribute_methods.rb:167:in `method_missing'
+  activemodel (4.0.4) lib/active_model/validator.rb:151:in `block in validate'
+  activemodel (4.0.4) lib/active_model/validator.rb:150:in `each'
+  activemodel (4.0.4) lib/active_model/validator.rb:150:in `validate'
+  activerecord (4.0.4) lib/active_record/validations/presence.rb:5:in `validate'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:283:in `_callback_before_4'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__2899342462000283328__validate__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activemodel (4.0.4) lib/active_model/validations.rb:373:in `run_validations!'
+  activemodel (4.0.4) lib/active_model/validations/callbacks.rb:106:in `block in run_validations!'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:393:in `_run__2899342462000283328__validation__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activemodel (4.0.4) lib/active_model/validations/callbacks.rb:106:in `run_validations!'
+  activemodel (4.0.4) lib/active_model/validations.rb:314:in `valid?'
+  activerecord (4.0.4) lib/active_record/validations.rb:70:in `valid?'
+  activerecord (4.0.4) lib/active_record/validations.rb:77:in `perform_validations'
+  activerecord (4.0.4) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.0.4) lib/active_record/attribute_methods/dirty.rb:32:in `save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:270:in `block (2 levels) in save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:330:in `block in with_transaction_returning_status'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:221:in `within_new_transaction'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+  activerecord (4.0.4) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.4) lib/active_record/transactions.rb:327:in `with_transaction_returning_status'
+  activerecord (4.0.4) lib/active_record/transactions.rb:270:in `block in save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:285:in `rollback_active_record_state!'
+  activerecord (4.0.4) lib/active_record/transactions.rb:269:in `save'
+  devise (3.2.4) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.0.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:433:in `_run__4561286987016839483__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3683960656256412154__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.8ms)
+
+
+Started POST "/owners" for 127.0.0.1 at 2014-06-04 09:13:00 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "owner"=>{"email"=>"example@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 111ms
+
+NoMethodError (undefined method `name' for #<Owner:0x007fc22957dd28>):
+  activemodel (4.0.4) lib/active_model/attribute_methods.rb:439:in `method_missing'
+  activerecord (4.0.4) lib/active_record/attribute_methods.rb:167:in `method_missing'
+  activemodel (4.0.4) lib/active_model/validator.rb:151:in `block in validate'
+  activemodel (4.0.4) lib/active_model/validator.rb:150:in `each'
+  activemodel (4.0.4) lib/active_model/validator.rb:150:in `validate'
+  activerecord (4.0.4) lib/active_record/validations/presence.rb:5:in `validate'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:283:in `_callback_before_18'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:387:in `_run__2899342462000283328__validate__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activemodel (4.0.4) lib/active_model/validations.rb:373:in `run_validations!'
+  activemodel (4.0.4) lib/active_model/validations/callbacks.rb:106:in `block in run_validations!'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:393:in `_run__2899342462000283328__validation__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activemodel (4.0.4) lib/active_model/validations/callbacks.rb:106:in `run_validations!'
+  activemodel (4.0.4) lib/active_model/validations.rb:314:in `valid?'
+  activerecord (4.0.4) lib/active_record/validations.rb:70:in `valid?'
+  activerecord (4.0.4) lib/active_record/validations.rb:77:in `perform_validations'
+  activerecord (4.0.4) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.0.4) lib/active_record/attribute_methods/dirty.rb:32:in `save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:270:in `block (2 levels) in save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:330:in `block in with_transaction_returning_status'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:221:in `within_new_transaction'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+  activerecord (4.0.4) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.4) lib/active_record/transactions.rb:327:in `with_transaction_returning_status'
+  activerecord (4.0.4) lib/active_record/transactions.rb:270:in `block in save'
+  activerecord (4.0.4) lib/active_record/transactions.rb:285:in `rollback_active_record_state!'
+  activerecord (4.0.4) lib/active_record/transactions.rb:269:in `save'
+  devise (3.2.4) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.0.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:433:in `_run__4561286987016839483__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3683960656256412154__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/peterbrown/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Load (1.8ms)[0m  SELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT 1
+  [1m[36mOwner Load (1.6ms)[0m  [1mSELECT "owners".* FROM "owners" ORDER BY "owners"."id" DESC LIMIT 1[0m
+
+
+Started GET "/owners/sign_in" for 127.0.0.1 at 2014-06-04 09:15:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (776.4ms)
+Completed 200 OK in 1537ms (Views: 1360.6ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/owners/sign_in" for 127.0.0.1 at 2014-06-04 09:15:16 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC5wyKqra09tlgHgBl6XnqNSp9E9ok0NH8JqIwEtB9c=", "owner"=>{"email"=>"Start@up.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mOwner Load (3.9ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."email" = 'start@up.com' ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (42.6ms)[0m  UPDATE "owners" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "owners"."id" = 1  [["remember_created_at", Wed, 04 Jun 2014 16:15:16 UTC +00:00], ["updated_at", Wed, 04 Jun 2014 16:15:16 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "owners" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "owners"."id" = 1[0m  [["current_sign_in_at", Wed, 04 Jun 2014 16:15:16 UTC +00:00], ["sign_in_count", 2], ["updated_at", Wed, 04 Jun 2014 16:15:16 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 49.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:15:16 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (21.0ms)
+  [1m[35mOwner Load (0.8ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 200 OK in 623ms (Views: 134.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:15:39 -0700
+Processing by RestaurantsController#new as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.2ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:15:39 -0700
+Processing by RestaurantsController#new as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:20:52 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.7ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (17.7ms)
+  [1m[35mOwner Load (5.2ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 200 OK in 241ms (Views: 195.1ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:20:56 -0700
+Processing by RestaurantsController#new as HTML
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.3ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:20:56 -0700
+Processing by RestaurantsController#new as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:27:32 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mOwner Load (0.6ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+  [1m[35mRestaurant Load (0.7ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (55.8ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `new_owner_restaurant_path' for #<#<Class:0x007fa00b948880>:0x007fa00a89f830>):
+    3:   Restaurants
+    4:   <%- if current_owner %>
+    5:     <div class="pull-right">
+    6:       <%= link_to 'New Restaurant', new_owner_restaurant_path(current_owner), :class => 'btn' %>
+    7:     </div>
+    8:   <%- end %>
+    9: </h1>
+  app/views/restaurants/index.html.erb:6:in `_app_views_restaurants_index_html_erb__4581974403650260238_70162674151740'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/owners/sign_in" for 127.0.0.1 at 2014-06-04 09:27:35 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mOwner Load (0.8ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:29:02 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mOwner Load (0.6ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (62.2ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (undefined local variable or method `restaurant' for #<#<Class:0x007fa00988e7e8>:0x007fa00988d988>):
+    1: <div class="row">
+    2:   <h1>
+    3:   Restaurants
+    4:   <% if current_owner == restaurant.owner %>          <%= link_to('Edit',   {:action => 'edit', :id => restaurant.id}, :class => 'btn btn-mini') %>          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),                      {:action => 'delete', :id => restaurant.id},                      :method => :delete,                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },                      :class => 'btn btn-mini btn-danger' %>          <% end %>
+    5: </h1>
+    6: 
+    7: <ul class="thumbnails">
+  app/views/restaurants/index.html.erb:4:in `_app_views_restaurants_index_html_erb__4581974403650260238_70162665725340'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:29:23 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.6ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (6.6ms)
+  [1m[36mOwner Load (1.3ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 200 OK in 88ms (Views: 83.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:32:24 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mOwner Load (1.0ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mRestaurant Load (0.7ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (28.7ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `new_owner_restaurant_path' for #<#<Class:0x007fa00988e7e8>:0x007fa00bb0d490>):
+    2:   Restaurants
+    3:   <%- if current_owner %>
+    4:     <div class="pull-right">
+    5:       <%= link_to 'New Restaurant', new_owner_restaurant_path(current_owner), :class => 'btn' %>
+    6:     </div>
+    7:   <%- end %>
+    8: </h1>
+  app/views/restaurants/index.html.erb:5:in `_app_views_restaurants_index_html_erb__4581974403650260238_70162683814000'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.4ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mRestaurant Load (1.7ms)[0m  [1mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT 1[0m
+  [1m[35mOwner Load (1.5ms)[0m  SELECT "owners".* FROM "owners" ORDER BY "owners"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (40.1ms)[0m  UPDATE "restaurants" SET "owner_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = 17  [["owner_id", 1], ["updated_at", Wed, 04 Jun 2014 16:39:12 UTC +00:00]]
+  [1m[36m (1551.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurant Load (4.2ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."owner_id" = $1  [["owner_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:40:27 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mOwner Load (0.8ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mRestaurant Load (0.9ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined local variable or method `restaurant' for #<#<Class:0x007fa00988e7e8>:0x007fa00b97c9c8>):
+    1: <h1>
+    2:   Restaurants
+    3:   <% if current_owner == restaurant.owner %>          <%= link_to('Edit',   {:action => 'edit', :id => restaurant.id}, :class => 'btn btn-mini') %>          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),                      {:action => 'delete', :id => restaurant.id},                      :method => :delete,                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },                      :class => 'btn btn-mini btn-danger' %>          <% end %>
+    4: </h1>
+    5: 
+    6: <ul class="thumbnails">
+  app/views/restaurants/index.html.erb:3:in `_app_views_restaurants_index_html_erb__4581974403650260238_70162682984880'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:41:16 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.6ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (6.7ms)
+  [1m[36mOwner Load (0.9ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/restaurants/3" for 127.0.0.1 at 2014-06-04 09:41:18 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRestaurant Load (1.2ms)[0m  SELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered restaurants/show.html.erb within layouts/application (2.0ms)
+  [1m[36mOwner Load (0.8ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 200 OK in 172ms (Views: 168.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:41:24 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.8ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (7.8ms)
+  [1m[36mOwner Load (1.1ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 200 OK in 82ms (Views: 79.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:41:37 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mOwner Load (1.6ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (31.7ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (undefined method `new_owner_restaurant_path' for #<#<Class:0x007fa00988e7e8>:0x007fa00677e810>):
+    2:   Restaurants
+    3:   <%- if current_owner %>
+    4:     <div class="pull-right">
+    5:       <%= link_to 'New Restaurant', new_owner_restaurant_path(current_owner), :class => 'btn' %>
+    6:     </div>
+    7:   <%- end %>
+    8: </h1>
+  app/views/restaurants/index.html.erb:5:in `_app_views_restaurants_index_html_erb__4581974403650260238_70162640005380'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:41:58 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.7ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (7.0ms)
+  [1m[36mOwner Load (0.8ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:42:00 -0700
+Processing by RestaurantsController#new as HTML
+  [1m[35mOwner Load (2.3ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 404 Not Found in 31ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.1ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:42:00 -0700
+Processing by RestaurantsController#new as HTML
+  [1m[36mOwner Load (0.7ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:42:51 -0700
+Processing by RestaurantsController#new as HTML
+  [1m[35mOwner Load (0.7ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 404 Not Found in 41ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.1ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:42:57 -0700
+Processing by RestaurantsController#new as HTML
+  [1m[36mOwner Load (0.6ms)[0m  [1mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 33ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2014-06-04 09:44:11 -0700
+Processing by RestaurantsController#new as HTML
+  [1m[35mOwner Load (0.7ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 404 Not Found in 37ms
+
+ActiveRecord::RecordNotFound (Couldn't find Owner without an ID):
+  app/controllers/restaurants_controller.rb:15:in `new'
+
+
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/peterbrown/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-04 09:44:19 -0700
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (15.4ms)
+  [1m[35mOwner Load (1.0ms)[0m  SELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 ORDER BY "owners"."id" ASC LIMIT 1
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 1.6ms)
