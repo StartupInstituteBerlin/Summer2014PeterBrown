@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :authenticate_owner!, :except => [:index, :show]
+  # before_action :authenticate_owner!, :except => [:index, :show]
   # before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
@@ -8,6 +8,8 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find params[:id]
+    @reservation = Reservation.new
+    @reservation.restaurant = @restaurant
   end
 
   def new
@@ -17,6 +19,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new restaurant_params
+    @restaurant.owner_id = current_owner.id
 
     if @restaurant.save
         redirect_to @restaurant
@@ -48,6 +51,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo, :photo_cache, :owner)
+    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo, :photo_cache, :owner_id)
   end
 end
