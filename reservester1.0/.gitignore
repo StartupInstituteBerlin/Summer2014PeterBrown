@@ -1,3 +1,4 @@
 /public/uploads/*
 /log/*
 .env
+db/structure.sql
