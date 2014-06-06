@@ -54,3 +54,11 @@ class RestaurantsController < ApplicationController
     params.require(:restaurant).permit(:name, :description, :phone, :address, :photo, :photo_cache, :owner_id)
   end
 end
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 
 class Owner < ActiveRecord::Base
   
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :restaurants
+  # attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :restaurants
 
   has_many :restaurants
   has_many :reservations, through: :restaurants
