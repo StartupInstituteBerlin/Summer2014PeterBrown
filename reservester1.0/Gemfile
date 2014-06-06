@@ -63,7 +63,7 @@ gem 'carrierwave'
 gem 'sidekiq'
 gem 'devise'
 # allows for attr_accessible to be in the model.
-gem 'protected_attributes'
+
 gem 'thin'
 
 # Use ActiveModel has_secure_password
