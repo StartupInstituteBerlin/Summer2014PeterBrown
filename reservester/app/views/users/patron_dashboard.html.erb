@@ -1,0 +1,33 @@
+<div class="container">
+	<h1>Starred Restaurants</h1>
+<table class="table">
+	<tr>
+		<th>Photo</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Address</th>
+		<th>Phone</th>
+		<th>Owner Name</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @restaurants.each do |restaurant| %>
+		<tr>
+			<td><img src="<%= restaurant.photo.thumbnail.url %>" alt=""></td>
+			<td><%= restaurant.name %></td>
+			<td><%= restaurant.description %></td>
+			<td><%= restaurant.address %></td>
+			<td><%= restaurant.phone %></td>
+			<td><%= restaurant.user.name %></td>
+			<td><%= link_to 'Menu', restaurant.menu.url %></td>
+			<td><%= link_to 'Show', restaurant %></td>
+			<% if restaurant.user.owner? %>
+				<td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>
+
+</div>

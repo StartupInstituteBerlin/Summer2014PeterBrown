@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Today's Reservations</h1>
+    <% @restaurant.reservations.each do |reservation| %>
+      <p>
+        Restaurant: <%= reservation.restaurant.name %><br/>
+        Email: <%= reservation.email %><br/>
+        Time: <%= reservation.requested_date_time %><br/>
+        Message: <%= reservation.requested_date_time %><br/>
+      </p>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+<div class="container">
+	<h1>Restaurants</h1>
+	<div>
+		<%= link_to "Categories" , categories_path %>: 
+		<% @categories.each do |category| %>
+			<%= link_to "#{category.name} (#{category.restaurants.count})", category %> 
+		<% end %>
+	</div>
+	
+	<table class="table">
+		<tr>
+			<th>Photo</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Address</th>
+			<th>Phone</th>
+			<th>Owner Name</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		
+		<% @restaurants.each do |restaurant| %>
+			<tr>
+				<td><img src="<%= restaurant.photo.thumbnail.url %>" alt=""></td>
+				<td><%= restaurant.name %></td>
+				<td><%= restaurant.description %></td>
+				<td><%= restaurant.address %></td>
+				<td><%= restaurant.phone %></td>
+				<td><%= restaurant.user.name %></td>
+				<td><% unless restaurant.menu.blank? %>
+					<%= link_to 'Menu', restaurant.menu.url %>
+					<% end %></td>
+				<td><%= link_to 'Show', restaurant %></td>
+				<% if restaurant.user.owner? %>
+					<td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+	<% if current_user != nil and current_user.owner? %>
+		<td><%= link_to 'New', new_restaurant_path %></td>
+	<% end %>
+</div>
