@@ -3,8 +3,10 @@ class RestaurantsController < ApplicationController
   # before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
+    
     @restaurants = Restaurant.all
     @categories = Category.all
+
   end
 
   def show
@@ -20,6 +22,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @restaurant = Restaurant.new restaurant_params
     @restaurant.owner_id = current_owner.id
 
