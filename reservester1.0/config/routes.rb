@@ -1,4 +1,6 @@
 Reservester10::Application.routes.draw do
+  resources :categories
+
   get 'reservations/index'
   get 'reservations/show'
 
