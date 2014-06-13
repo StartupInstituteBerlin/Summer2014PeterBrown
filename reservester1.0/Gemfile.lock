@@ -30,6 +30,9 @@ GEM
       rake
     arel (4.0.2)
     bcrypt (3.1.7)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     builder (3.1.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -274,6 +277,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.5.0)
+  better_errors
   capybara (= 1.1.2)
   carrierwave
   coffee-rails (~> 4.0.0)
