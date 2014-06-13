@@ -37,6 +37,7 @@
     <%= label_tag category.name  %>
     <%= check_box_tag "restaurant[category_id][]", category.id, @restaurant.categories.include?(category)%>
   <%end%>
+  <ul><%= link_to 'Back', root_path, :class => 'btn btn-primary' %></ul>
   
   <br />
 

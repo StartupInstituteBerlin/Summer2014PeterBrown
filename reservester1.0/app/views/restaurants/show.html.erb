@@ -12,6 +12,7 @@
 <ul>
   <li><%= link_to 'Edit', edit_restaurant_path(@restaurant) %></li>
   <li><%= link_to 'Remove', restaurant_path(@restaurant), method: :delete %></li>
+  <li><%= link_to 'Back', root_path, :class => 'brand' %></li>
 </ul>
 
 <%= render 'reservation' %>

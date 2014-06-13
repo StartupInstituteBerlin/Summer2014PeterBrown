@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
-  # before_action :authenticate_owner!, :except => [:index, :show]
-  # before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
+  before_action :authenticate_owner!, :except => [:index, :show]
+  before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
     
@@ -11,6 +11,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find params[:id]
+    
     @reservation = Reservation.new
     @reservation.restaurant = @restaurant
 
@@ -29,7 +30,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
         redirect_to action: "index"
     else
-      render action: 'new'
+      render 'new'
     end
   end
 
@@ -43,9 +44,10 @@ class RestaurantsController < ApplicationController
     if @restaurant.update restaurant_params
       redirect_to @restaurant
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
+ 
 
   def destroy
     @restaurant = Restaurant.find params[:id]

@@ -14,6 +14,13 @@ class ReservationsController < ApplicationController
 			# render 'restaurants/reservation'
 			render 'restaurant/show'
 		end
+		
+		def destroy
+			@reservation = Reservation.find(params[:id])
+			@reservation.destroy
+
+			redirect_to restaurants_path
+		end
 	end
 
 	private
