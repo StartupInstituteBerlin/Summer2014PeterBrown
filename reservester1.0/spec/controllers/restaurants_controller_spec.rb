@@ -21,9 +21,10 @@ describe RestaurantsController do
 
   describe "#update" do
     before(:each) do
-      @restaurant = FactoryGirl.create(:restaurant)
+      @r = FactoryGirl.create(:restaurant)
       @category = FactoryGirl.create(:category)
       @category2 = FactoryGirl.create(:category)
+      @r.categories = [@category, @category2]
 
     end
 
@@ -31,13 +32,25 @@ describe RestaurantsController do
       
     end
     it "removes categories" do
-      put :update, {:restaurant => {:category_ids => [] }, :id =>  @restaurant.id }
+      @r.categories.should == [@category, @category2]
+      put :update, {:restaurant => {:category_ids => [] }, :id =>  @r.id }
+      # assigns(:restaurant) access the @restaurant in the restaurant controller
+      assigns(:restaurant).id.should == @r.id
+      assigns(:restaurant).categories.should == []
 
+     
+      #do @r.reload to reload an instance of the database chache.
+      #same as @r = Restaurant.find(@r.id)
+      @r.reload
+
+
+      @r.categories.should == []
 
     end
     it "updates the restaurant name" do
-      put :update,  {:restaurant => {:name => "Burgers Berlin"}, :id => @restaurant.id }
-
+      put :update,  {:restaurant => {:name => "Burgers Berlin"}, :id => @r.id }
+      @r.reload
+      @r.name.should == "Burgers Berlin"
       
     end
   end
