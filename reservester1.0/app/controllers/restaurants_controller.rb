@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    
     @restaurant = Restaurant.find params[:id]
     
     @reservation = Reservation.new
@@ -23,7 +24,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    raise params.inspect
+
     @restaurant = Restaurant.new restaurant_params
     @restaurant.owner_id = current_owner.id
 
@@ -39,6 +40,7 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+    params[:restaurant][:category_ids] ||=[]
     @restaurant = Restaurant.find params[:id]
 
     if @restaurant.update restaurant_params

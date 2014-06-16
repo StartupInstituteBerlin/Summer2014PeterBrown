@@ -1,6 +1,6 @@
 Reservester10::Application.routes.draw do
   resources :categories
-
+  get 'categories/index'
   get 'reservations/index'
   get 'reservations/show'
 
@@ -8,8 +8,8 @@ Reservester10::Application.routes.draw do
   resources :restaurants do
   	resources :reservations
 end
-
-  root 'restaurants#index'
+	resources :categories
+	root 'restaurants#index'
 
 
 end

@@ -5,7 +5,7 @@ include Devise::TestHelpers
 #TODO add before each block to allow 
 describe RestaurantsController do
   describe "#index" do
-  	xit "returns all restaurants" do
+  	it "returns all restaurants" do
   		r = FactoryGirl.create(:restaurant)
   		get :index
   		assigns(:restaurants).should == [r]

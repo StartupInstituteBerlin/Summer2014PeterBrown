@@ -1,0 +1,29 @@
+<div class="container">
+	<h1><%= @category_name %> Restaurants</h1>
+
+	<table class="table">
+		<tr>
+			<th>Photo</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Address</th>
+			<th>Phone</th>
+			<th>Owner Name</th>
+			
+		</tr>
+
+		<% @restaurants.each do |restaurant| %>
+			<tr>
+				<td><img src="<%= restaurant.photo.thumbnail.url %>" alt=""></td>
+				<td><%= restaurant.name %></td>
+				<td><%= restaurant.description %></td>
+				<td><%= restaurant.address %></td>
+				<td><%= restaurant.phone %></td>
+				<td><%= link_to 'Show', restaurant %></td>
+				<% if current_owner == restaurant.owner  && !current_owner.blank? %>
+					<td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>
