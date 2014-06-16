@@ -2,9 +2,8 @@
 
 FactoryGirl.define do
   factory :owner do
-  	name "Butter Cup"
-  	email "princess@example.com"
-  	password "foobar"
-  	password_confirmation "foobar"
+  	email {Faker::Internet.email()}
+  	password "foobarbars"
+  	password_confirmation "foobarbars"
   end
 end

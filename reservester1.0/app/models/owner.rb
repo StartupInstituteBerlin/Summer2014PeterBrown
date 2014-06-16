@@ -7,7 +7,7 @@ class Owner < ActiveRecord::Base
   has_many :restaurants
   has_many :reservations, through: :restaurants
 
-  validates :name, :email, presence: true
+  validates :email, presence: true
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
 
   # Include default devise modules. Others available are:

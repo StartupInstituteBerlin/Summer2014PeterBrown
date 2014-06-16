@@ -46,7 +46,7 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
   # FIXME: setup database_cleaner in rspec_helper.rb
-  #gem 'database_cleaner'
+  gem 'database_cleaner'
 end
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -67,6 +67,7 @@ gem 'devise'
 
 gem 'thin'
 gem 'better_errors'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

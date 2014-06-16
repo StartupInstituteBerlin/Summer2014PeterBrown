@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :authenticate_owner!, :except => [:index, :show]
+  # before_action :authenticate_owner!, :except => [:index, :show]
   # before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
