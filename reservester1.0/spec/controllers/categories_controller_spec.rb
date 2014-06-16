@@ -1,5 +1,6 @@
 require 'spec_helper'
-
+# TODO find a better place to put Devise::TestHelpers
+include Devise::TestHelpers
 
 describe CategoriesController do
 	describe "#index" do
@@ -13,10 +14,11 @@ describe CategoriesController do
 	# 	it "should return category by id"
 	# 		r = FactoryGirl.create(:category)
 	# 		get :show, id: r.id
-	# 		assigns(:categories).should == [r]
+	# 		assigns(:restaurants).should == [r]
 	# 	end
 	# end
 end
+
 
 
 

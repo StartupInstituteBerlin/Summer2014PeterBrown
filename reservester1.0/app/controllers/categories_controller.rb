@@ -4,9 +4,9 @@ class CategoriesController < ApplicationController
 	end
 	
 	def show 
-		category = Category.find(params[:id])
-  		@restaurants = category.restaurants
-  		@category_name = category.name
+		@category = Category.find(params[:id])
+  		@restaurants = @category.restaurants
+  		@category_name = @category.name
 	end
 	
 end
