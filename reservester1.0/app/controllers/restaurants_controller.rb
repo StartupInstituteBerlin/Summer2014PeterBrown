@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   # before_action :authenticate_owner!, :except => [:index, :show]
-  # before_action :require_restaurent_owner_match!, :only => [:edit, :update, :destroy]
+  # before_action :require_restaurant_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
     
@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    params[:restaurant][:category_ids] ||=[]
+    # params[:restaurant][:category_ids] ||=[]
     @restaurant = Restaurant.find params[:id]
 
     if @restaurant.update restaurant_params
