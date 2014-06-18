@@ -9,4 +9,8 @@ class Restaurant < ActiveRecord::Base
 
 	accepts_nested_attributes_for :reservations
 
+	def self.search(category)
+      category.restaurants
+	end
+
 end

@@ -21,7 +21,7 @@ describe CategoriesController do
 		it "should render the #show view" do
 			r = FactoryGirl.create(:category)
 			get :show, id: r
-			response.should render_template :show
+			response.should render_template :show 
 		end
 	end
 end

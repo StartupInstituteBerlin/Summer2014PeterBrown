@@ -41,11 +41,11 @@ group :development, :test do
   gem 'fabrication', '2.2.2'
   gem 'launchy', '2.1.2'
   gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '0.3.2'
+  gem 'guard-spring'
   gem 'spork', '0.9.0'
   gem 'faker'
   gem 'shoulda-matchers'
-  # FIXME: setup database_cleaner in rspec_helper.rb
+
   gem 'database_cleaner'
 end
 gem 'dotenv-rails', :groups => [:development, :test]

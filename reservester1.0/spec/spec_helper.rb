@@ -20,6 +20,11 @@ RSpec.configure do |config|
       example.run
     end
   end
+  
+  config.before(:each, type: :controller) do 
+    sign_out :owner
+    @request.env["devise.mapping"] = Devise.mappings[:owner]
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -43,4 +48,5 @@ RSpec.configure do |config|
   # config.include Devise::TestHelpers, :type => :controller
 
   config.include Devise::TestHelpers, type: :controller
+  
 end
