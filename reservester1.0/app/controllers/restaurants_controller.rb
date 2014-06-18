@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    # params[:restaurant][:category_ids] ||=[]
+    params[:restaurant][:category_ids] ||=[]
     @restaurant = Restaurant.find params[:id]
 
     if @restaurant.update restaurant_params

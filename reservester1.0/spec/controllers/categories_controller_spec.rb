@@ -10,13 +10,20 @@ describe CategoriesController do
 			assigns(:categories).should == [r]
 		end
 	end
-	# describe "#show" do
-	# 	it "should return category by id"
-	# 		r = FactoryGirl.create(:category)
-	# 		get :show, id: r.id
-	# 		assigns(:restaurants).should == [r]
-	# 	end
-	# end
+	describe "GET #show" do
+		it "should return category by id" do
+			r = FactoryGirl.create(:category)
+			get :show, id: r.id
+			# it should actually == r
+			assigns(:category).should == r
+		end
+		
+		it "should render the #show view" do
+			r = FactoryGirl.create(:category)
+			get :show, id: r
+			response.should render_template :show
+		end
+	end
 end
 
 
