@@ -3,8 +3,8 @@ class RestaurantsController < ApplicationController
   # before_action :require_restaurant_owner_match!, :only => [:edit, :update, :destroy]
 
   def index
-    
-    @restaurants = Restaurant.all
+
+    @restaurants = params[:q] ? Restaurant.search_for(params[:q].split) : Restaurant.all
     @categories = Category.all
 
   end

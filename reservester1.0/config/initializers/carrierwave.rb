@@ -10,8 +10,9 @@ CarrierWave.configure do |config|
    
     #:region                 => ENV['AWS_S3_REGION'],            
   }
-  config.fog_directory  = 'reservesterpeter'           
-  config.fog_public     = false                          
+  config.fog_directory  = ENV['bucket']           
+  config.fog_public     = true
+  config.storage         = :fog                          
 end
 
 # CarrierWave.configure do |config|

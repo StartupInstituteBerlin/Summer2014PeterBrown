@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 	def index
-		@categories = params[:q] ? Category.search_for(params[:q]) : Category.all
+		@categories = Category.all 
 	end
 	
 	def show 
