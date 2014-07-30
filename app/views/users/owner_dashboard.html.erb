@@ -1,0 +1,62 @@
+<div class="container">
+	<h1>Owner's Restaurants</h1>
+	<table class="table">
+		<tr>
+			<th>Photo</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Address</th>
+			<th>Phone</th>
+			<th>Owner Name</th>
+			<th>Stars</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% @restaurants.each do |restaurant| %>
+			<tr>
+				<td><img src="<%= restaurant.photo.thumbnail.url %>" alt=""></td>
+				<td><%= restaurant.name %></td>
+				<td><%= restaurant.description %></td>
+				<td><%= restaurant.address %></td>
+				<td><%= restaurant.phone %></td>
+				<td><%= restaurant.user.name %></td>
+				<td><%= restaurant.stars.count %></td>
+				<td><%= link_to 'Menu', restaurant.menu.url %></td>
+				<td><%= link_to 'Show', restaurant %></td>
+				<% if restaurant.user.owner? %>
+					<td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+	<table class="table">
+		<tr>
+			<th>Restaurant</th>
+			<th>Email</th>
+			<th>Requested Time</th>
+			<th>Message</th>
+			<th>Status</th>
+			<th></th>
+		</tr>
+
+		<% @restaurants.each do |restaurant| %>
+			<% restaurant.reservations.each do |reservation| %>
+				<tr>
+					<td><%= reservation.restaurant.name %></td>
+					<td><%= reservation.email %></td>
+					<td><%= reservation.requested_date_time %></td>
+					<td><%= reservation.message %></td>
+					<td><%= reservation.status %></td>
+					<td><%= button_to "Confirm", {:action => "confirm", :controller => 'reservations', :id => reservation.id} if reservation.status == "Pending" %></td>
+
+				</tr>
+			<% end %>
+		<% end %>
+	</table>
+
+	<% if current_user.owner? %>
+		<td><%= link_to 'New', new_restaurant_path %></td>
+	<% end %>
+</div>

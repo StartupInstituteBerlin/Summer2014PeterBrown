@@ -1,0 +1,306 @@
+# Logfile created on 2014-03-14 22:53:09 -0400 by logger.rb/44203
+I, [2014-03-14T22:53:09.975813 #5473]  INFO -- : 0:  rake (10.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rake-10.1.1.gemspec
+I, [2014-03-14T22:53:09.976177 #5473]  INFO -- : 0:  i18n (0.6.9) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/i18n-0.6.9.gemspec
+I, [2014-03-14T22:53:10.822987 #5473]  INFO -- : 0:  minitest (4.7.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/minitest-4.7.5.gemspec
+I, [2014-03-14T22:53:10.823792 #5473]  INFO -- : 0:  multi_json (1.9.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.9.0.gemspec
+I, [2014-03-14T22:53:10.824324 #5473]  INFO -- : 0:  atomic (1.1.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/atomic-1.1.15.gemspec
+I, [2014-03-14T22:53:10.824868 #5473]  INFO -- : 0:  thread_safe (0.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thread_safe-0.2.0.gemspec
+I, [2014-03-14T22:53:10.825407 #5473]  INFO -- : 0:  tzinfo (0.3.39) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tzinfo-0.3.39.gemspec
+I, [2014-03-14T22:53:10.825975 #5473]  INFO -- : 0:  activesupport (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activesupport-4.0.3.gemspec
+I, [2014-03-14T22:53:10.826570 #5473]  INFO -- : 0:  builder (3.1.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/builder-3.1.4.gemspec
+I, [2014-03-14T22:53:10.827107 #5473]  INFO -- : 0:  erubis (2.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/erubis-2.7.0.gemspec
+I, [2014-03-14T22:53:10.827633 #5473]  INFO -- : 0:  rack (1.5.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-03-14T22:53:10.828171 #5473]  INFO -- : 0:  rack-test (0.6.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-03-14T22:53:10.828708 #5473]  INFO -- : 0:  actionpack (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionpack-4.0.3.gemspec
+I, [2014-03-14T22:53:10.829391 #5473]  INFO -- : 0:  mime-types (1.25.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-03-14T22:53:10.830094 #5473]  INFO -- : 0:  polyglot (0.3.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/polyglot-0.3.4.gemspec
+I, [2014-03-14T22:53:10.830790 #5473]  INFO -- : 0:  treetop (1.4.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/treetop-1.4.15.gemspec
+I, [2014-03-14T22:53:10.831516 #5473]  INFO -- : 0:  mail (2.5.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mail-2.5.4.gemspec
+I, [2014-03-14T22:53:10.832103 #5473]  INFO -- : 0:  actionmailer (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionmailer-4.0.3.gemspec
+I, [2014-03-14T22:53:10.832638 #5473]  INFO -- : 0:  activemodel (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activemodel-4.0.3.gemspec
+I, [2014-03-14T22:53:10.833176 #5473]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-03-14T22:53:10.833720 #5473]  INFO -- : 0:  arel (4.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/arel-4.0.2.gemspec
+I, [2014-03-14T22:53:10.834382 #5473]  INFO -- : 0:  activerecord (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-4.0.3.gemspec
+I, [2014-03-14T22:53:10.834985 #5473]  INFO -- : 0:  coffee-script-source (1.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-03-14T22:53:10.835530 #5473]  INFO -- : 0:  execjs (2.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/execjs-2.0.2.gemspec
+I, [2014-03-14T22:53:10.836069 #5473]  INFO -- : 0:  coffee-script (2.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-2.2.0.gemspec
+I, [2014-03-14T22:53:10.836622 #5473]  INFO -- : 0:  thor (0.18.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thor-0.18.1.gemspec
+I, [2014-03-14T22:53:10.837159 #5473]  INFO -- : 0:  railties (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/railties-4.0.3.gemspec
+I, [2014-03-14T22:53:10.837691 #5473]  INFO -- : 0:  coffee-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-rails-4.0.1.gemspec
+I, [2014-03-14T22:53:10.838321 #5473]  INFO -- : 0:  hike (1.2.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/hike-1.2.3.gemspec
+I, [2014-03-14T22:53:10.838879 #5473]  INFO -- : 0:  jbuilder (1.5.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jbuilder-1.5.3.gemspec
+I, [2014-03-14T22:53:10.839416 #5473]  INFO -- : 0:  jquery-rails (3.1.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-03-14T22:53:13.955027 #5473]  INFO -- : 0:  json (1.8.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/json-1.8.1.gemspec
+E, [2014-03-14T22:53:19.848605 #5473] ERROR -- : Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    /home/cindy/.rvm/rubies/ruby-2.1.0/bin/ruby extconf.rb 
+checking for ruby/thread.h... yes
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/cindy/.rvm/rubies/ruby-2.1.0/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /home/cindy/.rvm/gems/ruby-2.1.0/gems/mysql2-0.3.15 for inspection.
+Results logged to /home/cindy/.rvm/gems/ruby-2.1.0/extensions/x86_64-linux/2.1.0/mysql2-0.3.15/gem_make.out
+
+/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:89:in `run'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/ext_conf_builder.rb:38:in `block in build'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tempfile.rb:324:in `open'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/ext_conf_builder.rb:17:in `build'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:161:in `block (2 levels) in build_extension'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:160:in `chdir'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:160:in `block in build_extension'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:159:in `synchronize'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:159:in `build_extension'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:198:in `block in build_extensions'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:195:in `each'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/ext/builder.rb:195:in `build_extensions'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/installer.rb:677:in `build_extensions'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/site_ruby/2.1.0/rubygems/installer.rb:232:in `install'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/source/rubygems.rb:101:in `block in install'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/source/rubygems.rb:94:in `install'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:295:in `block in install_sequentially'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/forwardable.rb:183:in `each'  \n/home/cindy/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/forwardable.rb:183:in `each'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:294:in `install_sequentially'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:97:in `run'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/installer.rb:15:in `install'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/cli.rb:257:in `install'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/vendor/thor/command.rb:27:in `run'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/vendor/thor.rb:363:in `dispatch'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/vendor/thor/base.rb:438:in `start'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/cli.rb:10:in `start'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/bin/bundle:22:in `block in <top (required)>'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/gems/bundler-1.5.0/bin/bundle:22:in `<top (required)>'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/bin/bundle:23:in `load'  \n/home/cindy/.rvm/gems/ruby-2.1.0@global/bin/bundle:23:in `<main>'  \n/home/cindy/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `eval'  \n/home/cindy/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `<main>'
+I, [2014-03-14T23:08:36.610614 #6713]  INFO -- : 0:  rake (10.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rake-10.1.1.gemspec
+I, [2014-03-14T23:08:36.610979 #6713]  INFO -- : 0:  i18n (0.6.9) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/i18n-0.6.9.gemspec
+I, [2014-03-14T23:08:36.847829 #6713]  INFO -- : 0:  minitest (4.7.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/minitest-4.7.5.gemspec
+I, [2014-03-14T23:08:36.848273 #6713]  INFO -- : 0:  multi_json (1.9.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.9.0.gemspec
+I, [2014-03-14T23:08:36.848531 #6713]  INFO -- : 0:  atomic (1.1.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/atomic-1.1.15.gemspec
+I, [2014-03-14T23:08:36.848771 #6713]  INFO -- : 0:  thread_safe (0.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thread_safe-0.2.0.gemspec
+I, [2014-03-14T23:08:36.849015 #6713]  INFO -- : 0:  tzinfo (0.3.39) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tzinfo-0.3.39.gemspec
+I, [2014-03-14T23:08:36.849295 #6713]  INFO -- : 0:  activesupport (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activesupport-4.0.3.gemspec
+I, [2014-03-14T23:08:36.849532 #6713]  INFO -- : 0:  builder (3.1.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/builder-3.1.4.gemspec
+I, [2014-03-14T23:08:36.849764 #6713]  INFO -- : 0:  erubis (2.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/erubis-2.7.0.gemspec
+I, [2014-03-14T23:08:36.849998 #6713]  INFO -- : 0:  rack (1.5.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-03-14T23:08:36.850264 #6713]  INFO -- : 0:  rack-test (0.6.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-03-14T23:08:36.850517 #6713]  INFO -- : 0:  actionpack (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionpack-4.0.3.gemspec
+I, [2014-03-14T23:08:36.850753 #6713]  INFO -- : 0:  mime-types (1.25.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-03-14T23:08:36.851001 #6713]  INFO -- : 0:  polyglot (0.3.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/polyglot-0.3.4.gemspec
+I, [2014-03-14T23:08:36.851243 #6713]  INFO -- : 0:  treetop (1.4.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/treetop-1.4.15.gemspec
+I, [2014-03-14T23:08:36.851478 #6713]  INFO -- : 0:  mail (2.5.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mail-2.5.4.gemspec
+I, [2014-03-14T23:08:36.851726 #6713]  INFO -- : 0:  actionmailer (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionmailer-4.0.3.gemspec
+I, [2014-03-14T23:08:36.851961 #6713]  INFO -- : 0:  activemodel (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activemodel-4.0.3.gemspec
+I, [2014-03-14T23:08:36.852203 #6713]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-03-14T23:08:36.852454 #6713]  INFO -- : 0:  arel (4.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/arel-4.0.2.gemspec
+I, [2014-03-14T23:08:36.852704 #6713]  INFO -- : 0:  activerecord (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-4.0.3.gemspec
+I, [2014-03-14T23:08:36.852957 #6713]  INFO -- : 0:  coffee-script-source (1.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-03-14T23:08:36.853200 #6713]  INFO -- : 0:  execjs (2.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/execjs-2.0.2.gemspec
+I, [2014-03-14T23:08:36.853433 #6713]  INFO -- : 0:  coffee-script (2.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-2.2.0.gemspec
+I, [2014-03-14T23:08:36.853637 #6713]  INFO -- : 0:  thor (0.18.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thor-0.18.1.gemspec
+I, [2014-03-14T23:08:36.853827 #6713]  INFO -- : 0:  railties (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/railties-4.0.3.gemspec
+I, [2014-03-14T23:08:36.854028 #6713]  INFO -- : 0:  coffee-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-rails-4.0.1.gemspec
+I, [2014-03-14T23:08:36.854230 #6713]  INFO -- : 0:  hike (1.2.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/hike-1.2.3.gemspec
+I, [2014-03-14T23:08:36.854462 #6713]  INFO -- : 0:  jbuilder (1.5.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jbuilder-1.5.3.gemspec
+I, [2014-03-14T23:08:36.854661 #6713]  INFO -- : 0:  jquery-rails (3.1.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-03-14T23:08:38.629858 #6713]  INFO -- : 0:  json (1.8.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/json-1.8.1.gemspec
+I, [2014-03-14T23:08:43.426936 #6713]  INFO -- : 0:  mysql2 (0.3.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mysql2-0.3.15.gemspec
+I, [2014-03-14T23:08:43.428044 #6713]  INFO -- : 0:  pg (0.17.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/pg-0.17.1.gemspec
+I, [2014-03-14T23:08:43.428816 #6713]  INFO -- : 0:  bundler (1.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.0.gemspec
+I, [2014-03-14T23:08:43.429577 #6713]  INFO -- : 0:  tilt (1.4.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-03-14T23:08:43.430328 #6713]  INFO -- : 0:  sprockets (2.11.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-2.11.0.gemspec
+I, [2014-03-14T23:08:43.431087 #6713]  INFO -- : 0:  sprockets-rails (2.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-rails-2.0.1.gemspec
+I, [2014-03-14T23:08:43.431900 #6713]  INFO -- : 0:  rails (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rails-4.0.3.gemspec
+I, [2014-03-14T23:08:43.432678 #6713]  INFO -- : 0:  rdoc (4.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rdoc-4.1.1.gemspec
+I, [2014-03-14T23:08:43.433434 #6713]  INFO -- : 0:  sass (3.3.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-3.3.0.gemspec
+I, [2014-03-14T23:08:43.434106 #6713]  INFO -- : 0:  sass-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-rails-4.0.1.gemspec
+I, [2014-03-14T23:08:43.434856 #6713]  INFO -- : 0:  sdoc (0.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sdoc-0.4.0.gemspec
+I, [2014-03-14T23:08:43.435526 #6713]  INFO -- : 0:  turbolinks (2.2.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/turbolinks-2.2.1.gemspec
+I, [2014-03-14T23:08:43.436214 #6713]  INFO -- : 0:  uglifier (2.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/uglifier-2.4.0.gemspec
+I, [2014-03-15T22:22:52.252340 #9092]  INFO -- : 0:  rake (10.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rake-10.1.1.gemspec
+I, [2014-03-15T22:22:52.261570 #9092]  INFO -- : 0:  i18n (0.6.9) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/i18n-0.6.9.gemspec
+I, [2014-03-15T22:22:52.608376 #9092]  INFO -- : 0:  minitest (4.7.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/minitest-4.7.5.gemspec
+I, [2014-03-15T22:22:52.609724 #9092]  INFO -- : 0:  multi_json (1.9.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.9.0.gemspec
+I, [2014-03-15T22:22:52.610342 #9092]  INFO -- : 0:  atomic (1.1.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/atomic-1.1.15.gemspec
+I, [2014-03-15T22:22:52.610902 #9092]  INFO -- : 0:  thread_safe (0.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thread_safe-0.2.0.gemspec
+I, [2014-03-15T22:22:52.611431 #9092]  INFO -- : 0:  tzinfo (0.3.39) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tzinfo-0.3.39.gemspec
+I, [2014-03-15T22:22:52.612073 #9092]  INFO -- : 0:  activesupport (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activesupport-4.0.3.gemspec
+I, [2014-03-15T22:22:52.612615 #9092]  INFO -- : 0:  builder (3.1.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/builder-3.1.4.gemspec
+I, [2014-03-15T22:22:52.613182 #9092]  INFO -- : 0:  erubis (2.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/erubis-2.7.0.gemspec
+I, [2014-03-15T22:22:52.613777 #9092]  INFO -- : 0:  rack (1.5.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-03-15T22:22:52.614363 #9092]  INFO -- : 0:  rack-test (0.6.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-03-15T22:22:52.614884 #9092]  INFO -- : 0:  actionpack (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionpack-4.0.3.gemspec
+I, [2014-03-15T22:22:52.615442 #9092]  INFO -- : 0:  mime-types (1.25.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-03-15T22:22:52.615999 #9092]  INFO -- : 0:  polyglot (0.3.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/polyglot-0.3.4.gemspec
+I, [2014-03-15T22:22:52.616551 #9092]  INFO -- : 0:  treetop (1.4.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/treetop-1.4.15.gemspec
+I, [2014-03-15T22:22:52.617092 #9092]  INFO -- : 0:  mail (2.5.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mail-2.5.4.gemspec
+I, [2014-03-15T22:22:52.617692 #9092]  INFO -- : 0:  actionmailer (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionmailer-4.0.3.gemspec
+I, [2014-03-15T22:22:52.618368 #9092]  INFO -- : 0:  activemodel (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activemodel-4.0.3.gemspec
+I, [2014-03-15T22:22:52.618976 #9092]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-03-15T22:22:52.619544 #9092]  INFO -- : 0:  arel (4.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/arel-4.0.2.gemspec
+I, [2014-03-15T22:22:52.620133 #9092]  INFO -- : 0:  activerecord (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-4.0.3.gemspec
+I, [2014-03-15T22:22:52.620782 #9092]  INFO -- : 0:  coffee-script-source (1.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-03-15T22:22:52.621352 #9092]  INFO -- : 0:  execjs (2.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/execjs-2.0.2.gemspec
+I, [2014-03-15T22:22:52.621939 #9092]  INFO -- : 0:  coffee-script (2.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-2.2.0.gemspec
+I, [2014-03-15T22:22:52.622593 #9092]  INFO -- : 0:  thor (0.18.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thor-0.18.1.gemspec
+I, [2014-03-15T22:22:52.623248 #9092]  INFO -- : 0:  railties (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/railties-4.0.3.gemspec
+I, [2014-03-15T22:22:52.623805 #9092]  INFO -- : 0:  coffee-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-rails-4.0.1.gemspec
+I, [2014-03-15T22:22:52.624394 #9092]  INFO -- : 0:  hike (1.2.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/hike-1.2.3.gemspec
+I, [2014-03-15T22:22:52.624950 #9092]  INFO -- : 0:  jbuilder (1.5.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jbuilder-1.5.3.gemspec
+I, [2014-03-15T22:22:52.625541 #9092]  INFO -- : 0:  jquery-rails (3.1.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-03-15T22:22:55.581496 #9092]  INFO -- : 0:  json (1.8.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/json-1.8.1.gemspec
+I, [2014-03-15T22:22:55.582737 #9092]  INFO -- : 0:  mysql2 (0.3.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mysql2-0.3.15.gemspec
+I, [2014-03-15T22:22:55.583339 #9092]  INFO -- : 0:  pg (0.17.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/pg-0.17.1.gemspec
+I, [2014-03-15T22:22:55.584060 #9092]  INFO -- : 0:  bundler (1.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.0.gemspec
+I, [2014-03-15T22:22:55.584754 #9092]  INFO -- : 0:  tilt (1.4.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-03-15T22:22:55.585427 #9092]  INFO -- : 0:  sprockets (2.11.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-2.11.0.gemspec
+I, [2014-03-15T22:22:55.586102 #9092]  INFO -- : 0:  sprockets-rails (2.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-rails-2.0.1.gemspec
+I, [2014-03-15T22:22:55.586811 #9092]  INFO -- : 0:  rails (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rails-4.0.3.gemspec
+I, [2014-03-15T22:22:55.587511 #9092]  INFO -- : 0:  rdoc (4.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rdoc-4.1.1.gemspec
+I, [2014-03-15T22:22:55.588204 #9092]  INFO -- : 0:  sass (3.3.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-3.3.0.gemspec
+I, [2014-03-15T22:22:55.588863 #9092]  INFO -- : 0:  sass-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-rails-4.0.1.gemspec
+I, [2014-03-15T22:22:55.589527 #9092]  INFO -- : 0:  sdoc (0.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sdoc-0.4.0.gemspec
+I, [2014-03-15T22:22:55.590218 #9092]  INFO -- : 0:  turbolinks (2.2.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/turbolinks-2.2.1.gemspec
+I, [2014-03-15T22:22:55.590882 #9092]  INFO -- : 0:  uglifier (2.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/uglifier-2.4.0.gemspec
+I, [2014-03-16T00:05:57.053709 #14759]  INFO -- : 0:  rake (10.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rake-10.1.1.gemspec
+I, [2014-03-16T00:05:57.054098 #14759]  INFO -- : 0:  i18n (0.6.9) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/i18n-0.6.9.gemspec
+I, [2014-03-16T00:05:57.351901 #14759]  INFO -- : 0:  minitest (4.7.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/minitest-4.7.5.gemspec
+I, [2014-03-16T00:05:57.352787 #14759]  INFO -- : 0:  multi_json (1.9.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.9.0.gemspec
+I, [2014-03-16T00:05:57.353426 #14759]  INFO -- : 0:  atomic (1.1.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/atomic-1.1.15.gemspec
+I, [2014-03-16T00:05:57.354162 #14759]  INFO -- : 0:  thread_safe (0.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thread_safe-0.2.0.gemspec
+I, [2014-03-16T00:05:57.354859 #14759]  INFO -- : 0:  tzinfo (0.3.39) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tzinfo-0.3.39.gemspec
+I, [2014-03-16T00:05:57.355555 #14759]  INFO -- : 0:  activesupport (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activesupport-4.0.3.gemspec
+I, [2014-03-16T00:05:57.356199 #14759]  INFO -- : 0:  builder (3.1.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/builder-3.1.4.gemspec
+I, [2014-03-16T00:05:57.356812 #14759]  INFO -- : 0:  erubis (2.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/erubis-2.7.0.gemspec
+I, [2014-03-16T00:05:57.357485 #14759]  INFO -- : 0:  rack (1.5.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-03-16T00:05:57.358131 #14759]  INFO -- : 0:  rack-test (0.6.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-03-16T00:05:57.358755 #14759]  INFO -- : 0:  actionpack (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionpack-4.0.3.gemspec
+I, [2014-03-16T00:05:57.359379 #14759]  INFO -- : 0:  mime-types (1.25.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-03-16T00:05:57.360025 #14759]  INFO -- : 0:  polyglot (0.3.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/polyglot-0.3.4.gemspec
+I, [2014-03-16T00:05:57.360696 #14759]  INFO -- : 0:  treetop (1.4.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/treetop-1.4.15.gemspec
+I, [2014-03-16T00:05:57.361343 #14759]  INFO -- : 0:  mail (2.5.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mail-2.5.4.gemspec
+I, [2014-03-16T00:05:57.362011 #14759]  INFO -- : 0:  actionmailer (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionmailer-4.0.3.gemspec
+I, [2014-03-16T00:05:57.362828 #14759]  INFO -- : 0:  activemodel (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activemodel-4.0.3.gemspec
+I, [2014-03-16T00:05:57.363579 #14759]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-03-16T00:05:57.364356 #14759]  INFO -- : 0:  arel (4.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/arel-4.0.2.gemspec
+I, [2014-03-16T00:05:57.368158 #14759]  INFO -- : 0:  activerecord (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-4.0.3.gemspec
+I, [2014-03-16T00:05:57.368474 #14759]  INFO -- : 0:  bundler (1.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.0.gemspec
+I, [2014-03-16T00:05:57.368727 #14759]  INFO -- : 0:  coffee-script-source (1.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-03-16T00:05:57.368962 #14759]  INFO -- : 0:  execjs (2.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/execjs-2.0.2.gemspec
+I, [2014-03-16T00:05:57.369195 #14759]  INFO -- : 0:  coffee-script (2.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-2.2.0.gemspec
+I, [2014-03-16T00:05:57.369426 #14759]  INFO -- : 0:  thor (0.18.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thor-0.18.1.gemspec
+I, [2014-03-16T00:05:57.369674 #14759]  INFO -- : 0:  railties (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/railties-4.0.3.gemspec
+I, [2014-03-16T00:05:57.369908 #14759]  INFO -- : 0:  coffee-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-rails-4.0.1.gemspec
+I, [2014-03-16T00:05:58.598491 #14759]  INFO -- : 0:  commonjs (0.2.7) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/commonjs-0.2.7.gemspec
+I, [2014-03-16T00:05:58.599330 #14759]  INFO -- : 0:  hike (1.2.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/hike-1.2.3.gemspec
+I, [2014-03-16T00:05:58.599923 #14759]  INFO -- : 0:  jbuilder (1.5.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jbuilder-1.5.3.gemspec
+I, [2014-03-16T00:05:58.600517 #14759]  INFO -- : 0:  jquery-rails (3.1.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-03-16T00:06:00.800460 #14759]  INFO -- : 0:  json (1.8.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/json-1.8.1.gemspec
+I, [2014-03-16T00:06:07.898047 #14759]  INFO -- : 0:  less (2.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/less-2.5.0.gemspec
+I, [2014-03-16T00:06:10.179126 #14759]  INFO -- : 0:  less-rails (2.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/less-rails-2.5.0.gemspec
+I, [2014-03-16T00:06:19.736808 #14759]  INFO -- : 0:  libv8 (3.16.14.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/libv8-3.16.14.3-x86_64-linux.gemspec
+I, [2014-03-16T00:06:19.737824 #14759]  INFO -- : 0:  mysql2 (0.3.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mysql2-0.3.15.gemspec
+I, [2014-03-16T00:06:19.738625 #14759]  INFO -- : 0:  pg (0.17.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/pg-0.17.1.gemspec
+I, [2014-03-16T00:06:19.739583 #14759]  INFO -- : 0:  tilt (1.4.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-03-16T00:06:19.740402 #14759]  INFO -- : 0:  sprockets (2.11.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-2.11.0.gemspec
+I, [2014-03-16T00:06:19.741227 #14759]  INFO -- : 0:  sprockets-rails (2.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-rails-2.0.1.gemspec
+I, [2014-03-16T00:06:19.742011 #14759]  INFO -- : 0:  rails (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rails-4.0.3.gemspec
+I, [2014-03-16T00:06:19.742824 #14759]  INFO -- : 0:  rdoc (4.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rdoc-4.1.1.gemspec
+I, [2014-03-16T00:06:21.294805 #14759]  INFO -- : 0:  ref (1.0.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/ref-1.0.5.gemspec
+I, [2014-03-16T00:06:21.295660 #14759]  INFO -- : 0:  sass (3.3.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-3.3.0.gemspec
+I, [2014-03-16T00:06:21.296259 #14759]  INFO -- : 0:  sass-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-rails-4.0.1.gemspec
+I, [2014-03-16T00:06:21.296840 #14759]  INFO -- : 0:  sdoc (0.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sdoc-0.4.0.gemspec
+I, [2014-03-16T00:06:49.043061 #14759]  INFO -- : 0:  therubyracer (0.12.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/therubyracer-0.12.1.gemspec
+I, [2014-03-16T00:06:49.043493 #14759]  INFO -- : 0:  turbolinks (2.2.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/turbolinks-2.2.1.gemspec
+I, [2014-03-16T00:06:49.043718 #14759]  INFO -- : 0:  uglifier (2.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/uglifier-2.4.0.gemspec
+I, [2014-03-16T00:13:09.548470 #15066]  INFO -- : 0:  rake (10.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rake-10.1.1.gemspec
+I, [2014-03-16T00:13:09.548913 #15066]  INFO -- : 0:  i18n (0.6.9) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/i18n-0.6.9.gemspec
+I, [2014-03-16T00:13:09.741330 #15066]  INFO -- : 0:  minitest (4.7.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/minitest-4.7.5.gemspec
+I, [2014-03-16T00:13:09.742239 #15066]  INFO -- : 0:  multi_json (1.9.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.9.0.gemspec
+I, [2014-03-16T00:13:09.743022 #15066]  INFO -- : 0:  atomic (1.1.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/atomic-1.1.15.gemspec
+I, [2014-03-16T00:13:09.743851 #15066]  INFO -- : 0:  thread_safe (0.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thread_safe-0.2.0.gemspec
+I, [2014-03-16T00:13:09.744609 #15066]  INFO -- : 0:  tzinfo (0.3.39) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tzinfo-0.3.39.gemspec
+I, [2014-03-16T00:13:09.745375 #15066]  INFO -- : 0:  activesupport (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activesupport-4.0.3.gemspec
+I, [2014-03-16T00:13:09.746268 #15066]  INFO -- : 0:  builder (3.1.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/builder-3.1.4.gemspec
+I, [2014-03-16T00:13:09.747096 #15066]  INFO -- : 0:  erubis (2.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/erubis-2.7.0.gemspec
+I, [2014-03-16T00:13:09.747884 #15066]  INFO -- : 0:  rack (1.5.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-03-16T00:13:09.748752 #15066]  INFO -- : 0:  rack-test (0.6.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-03-16T00:13:09.749507 #15066]  INFO -- : 0:  actionpack (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionpack-4.0.3.gemspec
+I, [2014-03-16T00:13:09.750301 #15066]  INFO -- : 0:  mime-types (1.25.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-03-16T00:13:09.750630 #15066]  INFO -- : 0:  polyglot (0.3.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/polyglot-0.3.4.gemspec
+I, [2014-03-16T00:13:09.750922 #15066]  INFO -- : 0:  treetop (1.4.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/treetop-1.4.15.gemspec
+I, [2014-03-16T00:13:09.751223 #15066]  INFO -- : 0:  mail (2.5.4) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mail-2.5.4.gemspec
+I, [2014-03-16T00:13:09.751537 #15066]  INFO -- : 0:  actionmailer (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/actionmailer-4.0.3.gemspec
+I, [2014-03-16T00:13:09.751841 #15066]  INFO -- : 0:  activemodel (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activemodel-4.0.3.gemspec
+I, [2014-03-16T00:13:09.752136 #15066]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-03-16T00:13:09.752418 #15066]  INFO -- : 0:  arel (4.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/arel-4.0.2.gemspec
+I, [2014-03-16T00:13:09.752700 #15066]  INFO -- : 0:  activerecord (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/activerecord-4.0.3.gemspec
+I, [2014-03-16T00:13:09.752991 #15066]  INFO -- : 0:  bundler (1.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.0.gemspec
+I, [2014-03-16T00:13:09.753272 #15066]  INFO -- : 0:  coffee-script-source (1.7.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-03-16T00:13:09.753576 #15066]  INFO -- : 0:  execjs (2.0.2) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/execjs-2.0.2.gemspec
+I, [2014-03-16T00:13:09.753860 #15066]  INFO -- : 0:  coffee-script (2.2.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-script-2.2.0.gemspec
+I, [2014-03-16T00:13:09.754099 #15066]  INFO -- : 0:  thor (0.18.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/thor-0.18.1.gemspec
+I, [2014-03-16T00:13:09.754328 #15066]  INFO -- : 0:  railties (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/railties-4.0.3.gemspec
+I, [2014-03-16T00:13:09.754544 #15066]  INFO -- : 0:  coffee-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/coffee-rails-4.0.1.gemspec
+I, [2014-03-16T00:13:09.754760 #15066]  INFO -- : 0:  commonjs (0.2.7) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/commonjs-0.2.7.gemspec
+I, [2014-03-16T00:13:09.754971 #15066]  INFO -- : 0:  hike (1.2.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/hike-1.2.3.gemspec
+I, [2014-03-16T00:13:09.755204 #15066]  INFO -- : 0:  jbuilder (1.5.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jbuilder-1.5.3.gemspec
+I, [2014-03-16T00:13:09.755417 #15066]  INFO -- : 0:  jquery-rails (3.1.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-03-16T00:13:11.373874 #15066]  INFO -- : 0:  json (1.8.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/json-1.8.1.gemspec
+I, [2014-03-16T00:13:11.374871 #15066]  INFO -- : 0:  less (2.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/less-2.5.0.gemspec
+I, [2014-03-16T00:13:11.375568 #15066]  INFO -- : 0:  less-rails (2.5.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/less-rails-2.5.0.gemspec
+I, [2014-03-16T00:13:11.376183 #15066]  INFO -- : 0:  libv8 (3.16.14.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/libv8-3.16.14.3-x86_64-linux.gemspec
+I, [2014-03-16T00:13:11.376807 #15066]  INFO -- : 0:  mysql2 (0.3.15) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/mysql2-0.3.15.gemspec
+I, [2014-03-16T00:13:11.377424 #15066]  INFO -- : 0:  pg (0.17.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/pg-0.17.1.gemspec
+I, [2014-03-16T00:13:11.378090 #15066]  INFO -- : 0:  tilt (1.4.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-03-16T00:13:11.378671 #15066]  INFO -- : 0:  sprockets (2.11.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-2.11.0.gemspec
+I, [2014-03-16T00:13:11.379283 #15066]  INFO -- : 0:  sprockets-rails (2.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sprockets-rails-2.0.1.gemspec
+I, [2014-03-16T00:13:11.379903 #15066]  INFO -- : 0:  rails (4.0.3) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rails-4.0.3.gemspec
+I, [2014-03-16T00:13:11.380590 #15066]  INFO -- : 0:  rdoc (4.1.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/rdoc-4.1.1.gemspec
+I, [2014-03-16T00:13:11.381197 #15066]  INFO -- : 0:  ref (1.0.5) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/ref-1.0.5.gemspec
+I, [2014-03-16T00:13:11.381862 #15066]  INFO -- : 0:  sass (3.3.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-3.3.0.gemspec
+I, [2014-03-16T00:13:11.382469 #15066]  INFO -- : 0:  sass-rails (4.0.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sass-rails-4.0.1.gemspec
+I, [2014-03-16T00:13:11.383035 #15066]  INFO -- : 0:  sdoc (0.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/sdoc-0.4.0.gemspec
+I, [2014-03-16T00:13:11.383680 #15066]  INFO -- : 0:  therubyracer (0.12.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/therubyracer-0.12.1.gemspec
+I, [2014-03-16T00:13:11.384259 #15066]  INFO -- : 0:  turbolinks (2.2.1) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/turbolinks-2.2.1.gemspec
+I, [2014-03-16T00:13:13.432253 #15066]  INFO -- : 0:  twitter-bootstrap-rails (2.2.8) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/twitter-bootstrap-rails-2.2.8.gemspec
+I, [2014-03-16T00:13:13.433043 #15066]  INFO -- : 0:  uglifier (2.4.0) from /home/cindy/.rvm/gems/ruby-2.1.0/specifications/uglifier-2.4.0.gemspec

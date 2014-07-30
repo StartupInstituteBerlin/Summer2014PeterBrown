@@ -1,0 +1,10 @@
+Today's Reservations
+===============================================
+
+<% @restaurant.reservations.each do |reservation| %>
+    Restaurant: <%= reservation.restaurant.name %>
+    Email: <%= reservation.email %>
+    Time: <%= reservation.requested_date_time %>
+    Message: <%= reservation.requested_date_time %>
+<% end %>
+
