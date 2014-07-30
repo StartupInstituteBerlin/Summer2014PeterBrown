@@ -10,12 +10,11 @@ CarrierWave.configure do |config|
    
     #:region                 => ENV['AWS_S3_REGION'],            
   }
-  config.fog_directory  = ENV['bucket']           
-  config.fog_public     = true
-  config.storage         = :fog                          
+  config.fog_directory  = 'reservesterberlin'           
+  config.fog_public     = false                          
 end
 
-# CarrierWave.configure do |config|
+# # CarrierWave.configure do |config|
 #   config.fog_credentials = {
 #     :provider               => 'AWS',
 #     :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
