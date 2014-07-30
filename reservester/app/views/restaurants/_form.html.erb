@@ -1,0 +1,87 @@
+<%= form_for @restaurant do |f| %>
+	<% if @restaurant.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited
+			  this post from being saved:</h2>
+			<ul>
+			<% @restaurant.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+	</p>
+	<p>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</p>
+	<p>
+		<%= f.label :phone %>
+		<%= f.text_field :phone %>
+	</p>
+	<p>
+    	<%= f.label :photo %>
+    	<%= image_tag(@restaurant.photo_url) if @restaurant.photo? %>
+    	<%= f.file_field :photo %>
+    	<%= f.hidden_field :photo_cache %>
+  	</p>
+  	<p>
+    	<%= f.label :menu %>
+    	<%= link_to 'Menu', @restaurant.menu_url if @restaurant.menu? %>
+    	<%= f.file_field :menu %>
+    	<%= f.hidden_field :menu_cache %>
+  	</p>
+  	 <p>
+    	<% for category in Category.find(:all) %>
+    	<div>
+    		<%= check_box_tag "restaurant[category_ids][]", category.id, @restaurant.categories.include?(category) %>
+    		<%= category.name %>
+    	</div>
+    	<% end %>
+  	</p>
+  		<p>
+		<%= f.label "Monday" %>
+		Open: <%= f.time_select :monday_open_at %>
+		Close: <%= f.time_select :monday_close_at %>
+	</p>
+	<p>
+		<%= f.label "Tuesday" %>
+		Open: <%= f.time_select :tuesday_open_at %>
+		Close: <%= f.time_select :tuesday_close_at %>
+	</p>
+	<p>
+		<%= f.label "Wednesday" %>
+		Open: <%= f.time_select :wednesday_open_at %>
+		Close: <%= f.time_select :wednesday_close_at %>
+	</p>
+	<p>
+		<%= f.label "Thursday" %>
+		Open: <%= f.time_select :thursday_open_at %>
+		Close: <%= f.time_select :thursday_close_at %>
+	</p>
+		<p>
+		<%= f.label "Friday" %>
+		Open: <%= f.time_select :friday_open_at %>
+		Close: <%= f.time_select :friday_close_at %>
+	</p>
+		<p>
+		<%= f.label "Saturday" %>
+		Open: <%= f.time_select :saturday_open_at %>
+		Close: <%= f.time_select :saturday_close_at %>
+	</p>
+		<p>
+		<%= f.label "Sunday" %>
+		Open: <%= f.time_select :sunday_open_at %>
+		Close: <%= f.time_select :sunday_close_at %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

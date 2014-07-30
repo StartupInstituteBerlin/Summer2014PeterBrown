@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
@@ -33,7 +33,7 @@ group :doc do
 end
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
-  
+  gem 'factory_girl_rails'
   gem 'annotate', '2.5.0'
   gem 'quiet_assets'
   gem 'simplecov', '0.6.3'
@@ -41,24 +41,32 @@ group :development, :test do
   gem 'fabrication', '2.2.2'
   gem 'launchy', '2.1.2'
   gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '0.3.2'
+  gem 'guard-spring'
   gem 'spork', '0.9.0'
   gem 'faker'
   gem 'shoulda-matchers'
+
   gem 'database_cleaner'
 end
+
 
 gem 'spring'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
-gem 'dotenv-rails'
+
 
 gem 'fog'
-gem 'rmagick'
+gem 'rmagick', require: false
 gem "mini_magick"
 gem 'carrierwave'
+gem 'sidekiq'
+gem 'devise'
+# allows for attr_accessible to be in the model.
+
+gem 'thin'
+gem 'better_errors'
 
 
 # Use ActiveModel has_secure_password

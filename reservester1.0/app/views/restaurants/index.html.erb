@@ -4,20 +4,31 @@
     <span class="pull-right">
       <%= link_to new_restaurant_path, class: 'btn btn-default' do %>
         <i class="icon-plus-sign"></i> Add a Restaurant
-      <%- end %>
+      <%end %>
+      <%= form_tag "/", method: "GET" do %>
+  <%= text_field_tag :q %>
+  <%= submit_tag "Search" %>
+<% end %>
     </span>
   </h1>
 </div>
+<div class="container">
+
+  <div>
+    <%= link_to "Categories" , categories_path %>: 
+    <% @categories.each do |category| %>
+      <%= link_to "#{category.name} (#{category.restaurants.count})", category %> 
+    <% end %>
+  </div>
+
 
 <ul class="thumbnails">
-  <%- @restaurants.each do |restaurant| %>
-    <li class="span3">
+  <% @restaurants.each do |restaurant| %>
+    <li class="span4">
       <%= link_to restaurant do %>
-        <div class="thumbnail">
-          <img src="<%= restaurant.photo.thumbnail.url %>" alt="">
-          <h3><%= restaurant.name %></h3>
-        </div>
-      <%- end %>
+        <%= image_tag restaurant.photo.thumbnail.url if restaurant.photo? %>
+        <h3><%= restaurant.name %><h3>
+      <% end %>
     </li>
-  <%- end %>
+  <% end %>
 </ul>

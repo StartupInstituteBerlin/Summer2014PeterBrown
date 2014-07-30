@@ -1,0 +1,99 @@
+<div class="container">
+
+<p>
+	<img src="<%= @restaurant.photo.masthead.url %>" alt="">
+</p>
+<p>
+	<strong>Name:</strong>
+	<%= @restaurant.name %>
+	
+</p>
+<p>
+	<strong>Stars:</strong>
+	<%= @restaurant.stars.count %>
+	<% if @starred %>
+		<%= link_to "Unstar", star_restaurant_path(@restaurant, type: "unstar"), method: :put %>
+	<% else @starred %>
+		<%= link_to "Star", star_restaurant_path(@restaurant, type: "star"), method: :put %>
+	<% end %>
+</p>
+<p>
+	<strong>Description:</strong>
+	<%= @restaurant.description %>
+</p>
+<p>
+	<strong>Address:</strong>
+	<%= @restaurant.address %>
+</p>
+<p>
+	<strong>Phone:</strong>
+	<%= @restaurant.phone %>
+</p>
+<p>
+	<strong>Restaurant Owner:</strong>
+	<%= @restaurant.user.name %>
+</p>
+
+<p>
+	<strong>Menu:</strong>
+	<%= link_to 'View PDF',@restaurant.menu.url %>
+</p>
+<p>
+	<strong>Categories:</strong>
+	<% @restaurant.categories.each do |category| %>
+		<strong><%= link_to category.name, category_path(category) %></strong>
+	<% end %>
+</p>
+<p>
+<strong>Hours:</strong><br>
+	<% if @restaurant.monday_open_at and @restaurant.monday_close_at %>
+		Monday:<%= @restaurant.monday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.monday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.tuesday_open_at and @restaurant.tuesday_close_at %>
+		Tuesday:<%= @restaurant.tuesday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.tuesday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.wednesday_open_at and @restaurant.wednesday_close_at %>
+		Wednesday:<%= @restaurant.wednesday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.wednesday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.thursday_open_at and @restaurant.thursday_close_at %>
+		Thursday:<%= @restaurant.thursday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.thursday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.friday_open_at and @restaurant.friday_close_at %>
+		Friday:<%= @restaurant.friday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.friday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.saturday_open_at and @restaurant.saturday_close_at %>
+		Saturday:<%= @restaurant.saturday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.saturday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+	<% if @restaurant.sunday_open_at and @restaurant.sunday_close_at %>
+		Sunday:<%= @restaurant.sunday_open_at.strftime("%l:%M%p") %> to <%= @restaurant.sunday_close_at.strftime("%l:%M%p") %><br>
+	<% end %>
+</p>
+<p>
+	<%= render 'reservations/form' %>
+</p>
+<%= link_to 'Back', restaurants_path %>
+<% if @restaurant.user.owner? %>
+	<% unless @restaurant.reservations.blank? %>
+	<h3>Reservations:</h3>
+	<ul class="thumbnails">
+	<% @restaurant.reservations.each do |reservation| %>
+		<% if reservation.id %>
+			<li class="span4">
+				<div class="thumbnail">
+					<h5>Requested Date Time: <%= reservation.requested_date_time %></h5>
+					<p>Email: <%= reservation.email %></p>
+					<p>Message: <%= reservation.message %></p>
+					<p>Status: <%= reservation.status %></p>
+					<p><%= button_to "Confirm", {:action=>"confirm", :controller => 'reservations', :id => reservation.id}%></p>
+					<p><%= link_to 'Delete', [reservation.restaurant, reservation],
+			    	method: :delete, data: { confirm: 'Are you sure?' } %></p>
+				</div>
+			</li>
+		<% end %>
+	<% end %>
+	</ul>
+	<% end %>
+	<%= link_to 'Destroy', restaurant_path(@restaurant),
+		 method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</div>

@@ -31,6 +31,14 @@
 
   <%= f.label :address %>
   <%= f.text_area :address%>
+  <br/>
+  <%= hidden_field_tag "restaurant[category_ids][]", nil %>
+  <% Category.all.each do |category|%>    
+    <%= label_tag category.name  %>
+    <%= check_box_tag "restaurant[category_ids][]", category.id, @restaurant.categories.include?(category)%>
+  <%end%>
+  <ul><%= link_to 'Back', root_path, :class => 'btn btn-primary' %></ul>
+  
   <br />
 
   <%= f.submit class: 'btn btn-primary' %>

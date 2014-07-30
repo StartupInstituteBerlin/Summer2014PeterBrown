@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Your reservation request confirmation!</h1>
+    <p>
+      We  have received your reservation for:
+      <%= @reservation.requested_date_time %><br/>
+    </p>
+    <p>
+      With the message: <%= @reservation.message %>
+    </p>
+    <p>Thanks for using reservester and have a great day!</p>
+  </body>
+</html>

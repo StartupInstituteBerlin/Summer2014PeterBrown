@@ -1,23 +1,37 @@
 class RestaurantsController < ApplicationController
+  before_action :authenticate_owner!, :except => [:index, :show]
+  # before_action :require_restaurant_owner_match!, :only => [:edit, :update, :destroy]
+
   def index
-    @restaurants = Restaurant.all
+
+    @restaurants = params[:q] ? Restaurant.search_for(params[:q].split) : Restaurant.all
+    @categories = Category.all
+
   end
 
   def show
+    
     @restaurant = Restaurant.find params[:id]
+    
+    @reservation = Reservation.new
+    @reservation.restaurant = @restaurant
+
   end
 
   def new
     @restaurant = Restaurant.new
+    
   end
 
   def create
+
     @restaurant = Restaurant.new restaurant_params
+    @restaurant.owner_id = current_owner.id
 
     if @restaurant.save
-        redirect_to @restaurant
+        redirect_to action: "index"
     else
-      render action: 'new'
+      render 'new'
     end
   end
 
@@ -26,14 +40,16 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+    params[:restaurant][:category_ids] ||=[]
     @restaurant = Restaurant.find params[:id]
 
     if @restaurant.update restaurant_params
       redirect_to @restaurant
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
+ 
 
   def destroy
     @restaurant = Restaurant.find params[:id]
@@ -44,6 +60,14 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo)
+    params.require(:restaurant).permit(:name, :description, :phone, :address, :photo, :photo_cache, :owner_id, :category_ids => [])
   end
 end
+
+
+
+
+
+
+
+
