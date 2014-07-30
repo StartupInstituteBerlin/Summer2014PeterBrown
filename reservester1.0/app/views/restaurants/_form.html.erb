@@ -1,0 +1,45 @@
+<%= form_for(@restaurant, multipart: true) do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div>
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+      <% @restaurant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+
+  <%= f.label :photo %>
+  <%= image_tag(@restaurant.photo_url) if @restaurant.photo? %>
+  <%= f.file_field :photo%>
+  <%= f.hidden_field :photo_cache %>
+  <br />
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br />
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <br />
+
+  <%= f.label :address %>
+  <%= f.text_area :address%>
+  <br/>
+  <%= hidden_field_tag "restaurant[category_ids][]", nil %>
+  <% Category.all.each do |category|%>    
+    <%= label_tag category.name  %>
+    <%= check_box_tag "restaurant[category_ids][]", category.id, @restaurant.categories.include?(category)%>
+  <%end%>
+  <ul><%= link_to 'Back', root_path, :class => 'btn btn-primary' %></ul>
+  
+  <br />
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

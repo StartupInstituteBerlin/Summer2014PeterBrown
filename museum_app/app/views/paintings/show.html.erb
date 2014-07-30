@@ -1,0 +1,8 @@
+<h1><%= @painting.title %></h1>
+<p>Year: <%= @painting.year %></p>
+<p>Style: <%= @painting.style%></p>
+<p>Artist: <%= link_to @painting.artist.name, @painting.artist %></p>
+<%= image_tag @painting.image %>
+<br/>
+<%= link_to "Edit This Painting", edit_painting_path(@painting) %>
+<br/><br/>
